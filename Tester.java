@@ -1,31 +1,22 @@
 // Tester.java
 public class Tester {
     public static void main(String[] args) {
-        // Test for CreditCardPayment
-        CreditCardPayment creditCardPayment = new CreditCardPayment();
-        creditCardPayment.balance = 5000.0;
-        System.out.println("Credit Card Payment Test 1:");
-        creditCardPayment.payBill(6000.0);
+        LocationChanger employee1 = new LocationChanger();
+        employee1.setName("Annabelle Michael");
+        employee1.setLocation("BL003, Delhi, STP");
 
-        CreditCardPayment creditCardPayment2 = new CreditCardPayment();
-        creditCardPayment2.balance = 3000.0;
-        System.out.println("\nCredit Card Payment Test 2:");
-        creditCardPayment2.payBill(2000.0);
+        LocationChanger employee2 = new LocationChanger();
+        employee2.setName("Jissele James");
+        employee2.setLocation("FL091, Pune, SEZ");
 
-        // Test for ShoppingPayment
-        ShoppingPayment shoppingPayment = new ShoppingPayment();
-        shoppingPayment.balance = 1000.0;
-        System.out.println("\nShopping Payment Test 1:");
-        shoppingPayment.payBill(1000.0);
+        employee1.welcomeEmployee();
+        employee1.checkCity();
+        employee1.editAddress();
 
-        ShoppingPayment shoppingPayment2 = new ShoppingPayment();
-        shoppingPayment2.balance = 1500.0;
-        System.out.println("\nShopping Payment Test 2:");
-        shoppingPayment2.payBill(1200.0);
+        System.out.println();
 
-        ShoppingPayment shoppingPayment3 = new ShoppingPayment();
-        shoppingPayment3.balance = 2000.0;
-        System.out.println("\nShopping Payment Test 3:");
-        shoppingPayment3.payBill(2500.0);
+        employee2.welcomeEmployee();
+        employee2.checkCity();
+        employee2.editAddress();
     }
 }

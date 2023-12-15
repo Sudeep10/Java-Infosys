@@ -1,25 +1,30 @@
 public class RegistrationTester {
     public static void main(String[] args) {
-        String[] telephoneNumbers1 = {"9452425421", "7676765252"};
-        Registration user1 = new Registration("Kevin", "MN989IN", telephoneNumbers1);
-        user1.displayDetails();
+        // Create two student registration objects
+        StudentRegistration student1 = new StudentRegistration("Peter", 23, 5001);
+        StudentRegistration student2 = new StudentRegistration("Peter", 24, 5003);
 
+        // Generate roll number for both students
+        student1.generateRollNumber();
+        student2.generateRollNumber();
+
+        // Display student details
+        displayStudentDetails(student1);
+        displayStudentDetails(student2);
+
+        // Compare objects and display the result
+        if (student1.equals(student2)) {
+            System.out.println("Objects are equal.");
+        } else {
+            System.out.println("Objects are not equal.");
+        }
+    }
+
+    private static void displayStudentDetails(StudentRegistration student) {
+        System.out.println("Student Details");
+        System.out.println("Name: " + student.getStudentName());
+        System.out.println("Admission Number: " + student.getAdmissionNumber());
+        System.out.println("Roll Number: " + student.getRollNumber());
         System.out.println();
-
-        String[] telephoneNumbers2 = {"2345615451", "6763562562"};
-        Registration user2 = new Registration("Julias", "123", "PN7878", telephoneNumbers2);
-        user2.displayDetails();
-
-        System.out.println();
-
-        String[] telephoneNumbers3 = {"9634524353", "9887373737"};
-        Registration user3 = new Registration("Jammy", "45453", "765", telephoneNumbers3);
-        user3.displayDetails();
-
-        System.out.println();
-
-        String[] telephoneNumbers4 = {"9867456367", "7645367356"};
-        Registration user4 = new Registration("Rose", "PN8934", "34356", telephoneNumbers4);
-        user4.displayDetails();
     }
 }
